@@ -1,0 +1,13 @@
+name: glearning
+channels: 
+- conda-forge
+dependencies:
+- python=3.13.18
+- numpy
+- scipy
+- scikit-learn
+- ipykernel
+- matplotlib
+- pip
+- pip:
+    - graphlearning
