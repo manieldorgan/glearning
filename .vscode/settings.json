@@ -1,5 +1,0 @@
-{
-  "python.defaultInterpreterPath": "/Users/home/miniconda3/envs/16A/bin/python",
-  "python-envs.defaultEnvManager": "ms-python.python:conda",
-  "python-envs.defaultPackageManager": "ms-python.python:conda"
-}

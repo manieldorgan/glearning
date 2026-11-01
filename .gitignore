@@ -13,3 +13,7 @@ dist/
 
 # Generated figures (rerun the experiments to recreate)
 plots/
+
+# Local scratch and editor settings
+temp/
+.vscode/
