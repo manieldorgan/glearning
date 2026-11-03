@@ -1,10 +1,9 @@
 import numpy as np
 import pytest
 
-from helpers import randsym
+from helpers import randsym, dirichlet_energy
 
 from glearning import (
-    dirichlet_energy,
     laplacian,
     laplacian_sparse,
 )

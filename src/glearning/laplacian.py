@@ -10,7 +10,3 @@ def laplacian(W):
 def laplacian_sparse(W):
     W_array = sp.csr_array(W)
     return sp.diags_array(W_array.sum(axis=1)) - W_array
-
-# Direct computation of the dirichlet energy
-def dirichlet_energy(W, u):
-    return 0.5 * (W * (np.subtract.outer(u, u)) ** 2).sum(axis=1).sum(axis=0)
