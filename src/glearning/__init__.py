@@ -8,7 +8,6 @@ from .graph import (
 )
 
 from .laplacian import (
-    dirichlet_energy,
     laplacian,
     laplacian_sparse,
 )
