@@ -3,12 +3,12 @@ channels:
   - conda-forge
 dependencies:
   - python=3.13
-  - numpy
-  - scipy
-  - scikit-learn
-  - matplotlib
-  - ipykernel
-  - pytest
-  - pip
+  - numpy=2.5.4
+  - scipy=1.18.1
+  - scikit-learn=1.9.1
+  - matplotlib=3.11.2
+  - ipykernel=7.4.0
+  - pytest=9.2.0
+  - pip=26.2.2
   - pip:
       - graphlearning==1.7.5
