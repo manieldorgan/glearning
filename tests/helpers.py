@@ -1,4 +1,4 @@
-
+import numpy as np
 
 # Creates a random symmetric numpy array of size n
 # sample drawn from the standard normal distribution
