@@ -3,8 +3,8 @@ import matplotlib.tri as mtri
 import numpy as np
 from pathlib import Path
 
-# plots/ at the repo root, no matter where the script is run from
-PLOTS_DIR = Path(__file__).resolve().parents[1] / "plots"
+
+PLOTS_DIR = Path(__file__).parent.resolve() / "figures"
 
 
 def simplex_points(k, m):

@@ -13,7 +13,7 @@ dist/
 .DS_Store
 
 # Generated figures (rerun the experiments to recreate)
-plots/
+figures/
 
 # Local scratch and editor settings
 .vscode/

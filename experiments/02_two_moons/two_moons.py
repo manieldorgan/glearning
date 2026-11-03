@@ -9,8 +9,7 @@ from sklearn.neighbors import kneighbors_graph
 
 import glearning as glr
 
-# plots/ at the repo root, no matter where the script is run from
-PLOTS_DIR = Path(__file__).resolve().parents[1] / "plots"
+PLOTS_DIR = Path(__file__).parent.resolve() / "figures"
 
 ###
 ### Experiment Production Stuff
