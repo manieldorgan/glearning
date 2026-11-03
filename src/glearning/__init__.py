@@ -11,7 +11,6 @@ from .checks import (
 from .graph import (
     build_graph,
     dirichlet_energy,
-    kagreement,
     laplace_learning,
     laplacian,
     laplacian_sparse,
