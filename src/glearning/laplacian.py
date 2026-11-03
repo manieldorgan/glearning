@@ -6,11 +6,10 @@ from scipy import sparse as sp
 def laplacian(W):
     return np.diag(W.sum(axis=1)) - W
 
-
+# Sparse version of laplacian()
 def laplacian_sparse(W):
     W_array = sp.csr_array(W)
     return sp.diags_array(W_array.sum(axis=1)) - W_array
-
 
 # Direct computation of the dirichlet energy
 def dirichlet_energy(W, u):

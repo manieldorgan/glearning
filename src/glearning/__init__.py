@@ -10,11 +10,15 @@ from .checks import (
 )
 from .graph import (
     build_graph,
-    laplace_learning,
 )
 
 from .laplacian import (
     dirichlet_energy,
     laplacian,
     laplacian_sparse,
+)
+
+from .solvers import (
+    laplace_learning,
+    slaplace_learning,
 )
