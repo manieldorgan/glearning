@@ -68,9 +68,3 @@ def slaplace_learning():
     raise NotImplementedError
 
 
-###
-### Agreement
-###
-
-def kagreement(*args):
-    return sum(p**2 for p in args) + (1 - sum(p for p in args)) ** 2

@@ -24,10 +24,9 @@ def simplex_points(k, m):
 def project(P):
     return P[:, :-1]
 
-# Compute agreement from probability vectors
+# Compute local agreement probability
 def agreement(P):
     return (P ** 2).sum(axis=1)
-
 
 # k = 2
 P2 = simplex_points(2, 250)       
