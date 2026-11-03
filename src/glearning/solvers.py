@@ -1,5 +1,4 @@
 import numpy as np
-import scipy.sparse as sp
 
 # Takes the graph laplacian, a 1D array of the indices with labels, and a 1D array of labels corresponding to said indices
 # returns the full vector solution u

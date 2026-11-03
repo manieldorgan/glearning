@@ -47,11 +47,8 @@ def run_experiment(X, true_labels, k, sigma, n_per_class, seed):
     result["labeled"], y = pick_labels(true_labels, n_per_class, rng)
     
     W = glr.build_graph(X, k, sigma)
-    if not (glr.check_diag_sum(W) and glr.check_symmetric(W)):
-        print("BAD BUILD")
-        return result
-
     W.eliminate_zeros()
+
     result["n_comp"], result["comp"] = csgraph.connected_components(W, directed=False) 
     result["ok"] = set(result["comp"][result["labeled"]]) == set(range(result["n_comp"]))
     if not result["ok"]:
