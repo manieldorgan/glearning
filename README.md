@@ -45,7 +45,7 @@ $$W_{ij} = \exp\left(-\frac{\lVert x_i - x_j \rVert^2}{\sigma^2}\right),$$
  
 and the graph is symmetrized by keeping an edge if either endpoint chose it: $W_{ij}= \max(W_{ij}, W_{ji})$.
  
-**Laplacian.** $L = D - W$, where $D = \operatorname{diag}(d_1, \dots, d_n)$ and $d_i = \sum_j W_{ij}$. For any $u \in \mathbb{R}^n$,
+**Laplacian.** $L = D - W$, where $D = \text{diag}(d_1, \dots, d_n)$ and $d_i = \sum_j W_{ij}$. For any $u \in \mathbb{R}^n$,
  
 $$u^\top L u = \frac{1}{2} \sum_{i,j} W_{ij} (u_i - u_j)^2,$$
  
@@ -55,7 +55,7 @@ which is small exactly when $u$ varies little across strong edges.
  
 $$L_{UU}\, u_U = -L_{U\ell}\, y_\ell,$$
  
-and predictions are $\operatorname{sign}(u)$. The system has a unique solution when every connected component of the graph contains a label.
+and predictions are $\text{sign}(u)$. The system has a unique solution when every connected component of the graph contains a label.
  
 **Numerical caveat.** When weights span many orders of magnitude (very small $\sigma$), $L_{UU}$ can be so ill-conditioned that float64 results are meaningless. As a rule of thumb, a solve keeps about $16 - \log_{10} \kappa(L_{UU})$ trustworthy digits. See the two-moons write-up for a case with $\kappa \approx 2 \times 10^{50}$.
  
