@@ -32,6 +32,8 @@ An apparent third failure for $\sigma \ll1$ turned out to be a numerical error; 
 ### Baseline.
 100% accuracy from 4 labels. Confidence $|u|$ is highest deep inside each moon and fades at the tip of the upper moon, where the two moons approach.
 
+![Baseline](figures/baseline.png)
+
 ### Sweep.
 Mean accuracy over 5 seeds:
 
@@ -42,8 +44,12 @@ Mean accuracy over 5 seeds:
 | $\sigma\in[4,10]\times \text{median}$                        | 0.86–0.96, worst at large k | Far edges become strong; labels leak across, \|u\| shrinks to ~0.3, errors appear where the moons meet |
 | $\sigma=0.1\times \text{median}$                             | 0.46–0.54                   | Floating-point failure, not a method failure (see below)                                               |
 
+![Sweep](figures/sweep.png)
+
 ### Failure Gallery.
 **The $k\text{-}\sigma$ interaction.** Large $k$ alone is harmless: at $\sigma = \text{median},\; k = 80$ still scores $1.000$, because far neighbors get negligible weight. Large $k$ hurts only together with large $\sigma$ ($k=80$ at $\sigma=4\times \text{median}$: 0.960). "$k$ too large" and "$\sigma$ too large" are one mechanism: too many effectively strong long-range edges.
+
+![Gallery](figures/gallery.png)
 
 **Tiny-$\sigma$ failure is a numerical error.** At $\sigma=0.1\times \text{median}$ ($k = 10$, seed 0), weights range from $0.9$ down to $\approx 10^{-322}$, and the condition number of $L_{UU}$ is $\approx 2\cdot 10^{50}$, far beyond `float64`'s $\approx 16$ digits. The `float64` accuracies are rounding noise:
 - The same case gave $0.442$, $0.593$ and $0.562$ across code versions on one machine, and $0.550$ on another.
