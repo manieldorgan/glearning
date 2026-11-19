@@ -18,14 +18,6 @@ def knn_distances(X,k):
     """
     return sp.csr_array(kneighbors_graph(X, k, mode="distance"))
 
-def epsilon_distances(X, eps):
-    """
-    Points, eps -> sparse D 
-    """
-    # handle non unique points by giving them small float weights that wont effect calculations 
-    return sp.csr_array(radius_neighbors_graph(X, eps, mode="distance"))
-
-
 
 ### Stage 2
 def gaussian_weights(D, sigma):
